@@ -41,7 +41,7 @@ Large screen:
 ### Links
 
 - Solution URL: [View Source Code](https://github.com/novatok/pomodoro.git)
-- Live Site URL: [](https://novatok.github.io/pomodoro/)
+- Live Site URL: [Pomodoro](https://novatok.github.io/pomodoro/)
 
 ## My process
 
