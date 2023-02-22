@@ -1,0 +1,273 @@
+@import "colors";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Style the loader section
+
+#loader {
+    background: $MainBlue;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#loaderIcon {
+    border: 20px solid $SpinnerYellow;
+    border-top: 20px solid $MainBlue;
+    border-bottom: 20px solid $MainBlue;
+    border-radius: 50%;
+    background-color: $SecondaryBlue;
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);} 
+}
+
+//Main Content style
+#mainContent {
+    // background-color: $SecondaryBlue;
+    display: none;
+    min-width: 100%;
+    animation: pageAnim 2s;
+}
+
+@keyframes pageAnim {
+    from {bottom: -100px; opacity: 0;}
+    to {bottom: 0; opacity: 1;}
+}
+
+Body {
+    background-color: $BodyBG;
+    text-align: center;
+    color: $fontColor;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-top: 10px solid $MainBlue;
+
+    header {
+        padding-top: 10%;
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        #menu {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 100%;
+
+            ul {
+                width: 100%;
+                margin: 2%;
+                li {
+                    display: inline-block;
+                    margin: 2%;
+                    list-style: none;
+                    a {
+                        color: $MainBlue;
+                        text-decoration: none;
+                        font-size: 1.5em;
+                    }
+                    a:hover, a:active {
+                        color: $AccentBlue;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        margin-bottom: 10%;
+    }
+
+    #mode {
+        display: flex;
+        justify-content: center;
+        border-radius: 25px;
+        width: 50%;
+        margin: 10% auto;
+        -webkit-box-shadow: 0px 0px 8px 1px rgba(6,127,208,0.65);
+        -moz-box-shadow: 0px 0px 8px 1px rgba(6,127,208,0.65);
+        box-shadow: 0px 0px 8px 1px rgba(6,127,208,0.65);
+
+        button {
+            margin: 2% 8%;
+            background: transparent;
+            border: none;
+            font-size: 1.2rem;
+            color: $fontColor;
+            font-weight: 400;
+        }
+
+        .active {
+            color: $AccentBlue;
+            font-weight: 500;
+        }
+    }
+
+    .circle {
+        width: 17rem;
+        height: 17rem;
+        border-radius: 50%;
+        margin: auto;
+        -webkit-box-shadow: 0px 0px 15px 2px rgba(6,127,208,0.65);
+        -moz-box-shadow: 0px 0px 15px 2px rgba(6,127,208,0.65);
+        box-shadow: 0px 0px 15px 2px rgba(6,127,208,0.65);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .innercircle {
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+            margin: auto;
+            background-color: $AccentBlue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .timer {
+                width: 14rem;
+                height: 14rem;
+                border-radius: 50%;
+                margin: auto;
+                background-color: $BodyBG;
+                border: 1.5px solid $AccentPink;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                font-size: 3em;
+            }
+        }
+    }
+
+    .controls {
+        margin-top: 15%;
+        display: flex;
+        justify-content: space-evenly;
+
+        button {
+            border: none;
+            background-color: $BodyBG;
+            color: $fontColor;
+            font-size: 1.4em;
+        }
+    
+        button:hover, button:active {
+            color: $AccentPink;
+        }
+
+        button:disabled {
+            color: #485661;
+        }
+    }
+
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 2%;
+        background: $SecondaryBlue;
+        width: 100%;
+        text-align: center;
+
+        a{
+            text-decoration: none;
+            color: $AccentPink;
+        }
+        a:hover{
+            color: $AccentBlue;
+        }
+    }
+
+    // Hidden sections, contact and info
+    #Contact, #Info {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #Contact{
+        font-size: 3em;
+        background-color: $MainBlue;
+        color: $SecondaryBlue;
+        overflow: hidden;
+
+        ul {
+            padding-top: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            li {
+                list-style: none;
+                margin: 5% 0;
+            }
+        }
+    }
+
+    #Info {
+        font-size: 1.1em;
+        background-color: $SecondaryBlue;
+        color: aliceblue;
+        overflow: auto; 
+        padding: 2% 3% 20% 3%;
+
+        h4 {
+            font-size: 2em;
+            margin: 5% 2%;
+        }
+
+        p {
+            margin-top: 5%;
+
+            em {
+                color: $AccentPink;
+            }
+        }
+
+        
+    }
+
+    .close {
+        font-size: 1.3rem;
+        background-color: $BodyBG;
+        color: aliceblue;
+        width: 30%;
+        height: 15%;
+        margin: auto;
+        margin-top: -10%;
+        padding-top: 15%;
+        border-radius: 50%;
+        display: none;
+        animation: closeBtnAnim 2s linear forwards;
+    }
+
+    @keyframes closeBtnAnim {
+        from {margin-top: -26%; opacity: 0;}
+        to {margin-top: -10%; opacity: 1;}
+    }
+}
+

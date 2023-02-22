@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#loader {
+  background: #067FD0;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#loaderIcon {
+  border: 20px solid #e6e64e;
+  border-top: 20px solid #067FD0;
+  border-bottom: 20px solid #067FD0;
+  border-radius: 50%;
+  background-color: #151A7B;
+  height: 110px;
+  width: 110px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#mainContent {
+  display: none;
+  min-width: 100%;
+  animation: pageAnim 2s;
+}
+
+@keyframes pageAnim {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+Body {
+  background-color: #070928;
+  text-align: center;
+  color: #b8deff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-top: 10px solid #067FD0;
+}
+Body header {
+  padding-top: 10%;
+}
+Body header h1 {
+  font-size: 2.5em;
+}
+Body header #menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+Body header #menu ul {
+  width: 100%;
+  margin: 2%;
+}
+Body header #menu ul li {
+  display: inline-block;
+  margin: 2%;
+  list-style: none;
+}
+Body header #menu ul li a {
+  color: #067FD0;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+Body header #menu ul li a:hover, Body header #menu ul li a:active {
+  color: #223BC9;
+}
+Body main {
+  margin-bottom: 10%;
+}
+Body #mode {
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  width: 50%;
+  margin: 10% auto;
+  box-shadow: 0px 0px 8px 1px rgba(6, 127, 208, 0.65);
+}
+Body #mode button {
+  margin: 2% 8%;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #b8deff;
+  font-weight: 400;
+}
+Body #mode .active {
+  color: #223BC9;
+  font-weight: 500;
+}
+Body .circle {
+  width: 17rem;
+  height: 17rem;
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: 0px 0px 15px 2px rgba(6, 127, 208, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+Body .circle .innercircle {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin: auto;
+  background-color: #223BC9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+Body .circle .innercircle .timer {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  margin: auto;
+  background-color: #070928;
+  border: 1.5px solid #E63B60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-size: 3em;
+}
+Body .controls {
+  margin-top: 15%;
+  display: flex;
+  justify-content: space-evenly;
+}
+Body .controls button {
+  border: none;
+  background-color: #070928;
+  color: #b8deff;
+  font-size: 1.4em;
+}
+Body .controls button:hover, Body .controls button:active {
+  color: #E63B60;
+}
+Body .controls button:disabled {
+  color: #485661;
+}
+Body footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 2%;
+  background: #151A7B;
+  width: 100%;
+  text-align: center;
+}
+Body footer a {
+  text-decoration: none;
+  color: #E63B60;
+}
+Body footer a:hover {
+  color: #223BC9;
+}
+Body #Contact, Body #Info {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+Body #Contact {
+  font-size: 3em;
+  background-color: #067FD0;
+  color: #151A7B;
+  overflow: hidden;
+}
+Body #Contact ul {
+  padding-top: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+Body #Contact ul li {
+  list-style: none;
+  margin: 5% 0;
+}
+Body #Info {
+  font-size: 1.1em;
+  background-color: #151A7B;
+  color: aliceblue;
+  overflow: auto;
+  padding: 2% 3% 20% 3%;
+}
+Body #Info h4 {
+  font-size: 2em;
+  margin: 5% 2%;
+}
+Body #Info p {
+  margin-top: 5%;
+}
+Body #Info p em {
+  color: #E63B60;
+}
+Body .close {
+  font-size: 1.3rem;
+  background-color: #070928;
+  color: aliceblue;
+  width: 30%;
+  height: 15%;
+  margin: auto;
+  margin-top: -10%;
+  padding-top: 15%;
+  border-radius: 50%;
+  display: none;
+  animation: closeBtnAnim 2s linear forwards;
+}
+@keyframes closeBtnAnim {
+  from {
+    margin-top: -26%;
+    opacity: 0;
+  }
+  to {
+    margin-top: -10%;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */

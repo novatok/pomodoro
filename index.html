@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro | Optimal Productivity</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body onload="loadPage()">
+    <div id="loader">
+        <div id="loaderIcon"></div>
+    </div>
+    <div id="mainContent">
+        <header>
+            <h1>Pomodoro</h1>
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html"><i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <li>
+                        <a href="#Contact" onclick="showContact()"><i class="fa-solid fa-envelope"></i></a>
+                    </li>
+                    <li>
+                        <a href="#Info" onclick="showInfo()"><i class="fa-solid fa-circle-info"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="mode">
+                <button class="active" id="work" onclick="workMode()">Work</button>
+                <button id="break" onclick="breakMode()">Break</button>
+            </div>
+            <div class="circle">
+                <div class="innercircle">
+                    <div class="timer">
+                        <p id="minutes">25</p>
+                        <p>:</p>
+                        <p id="seconds">00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button onclick="startTimer()" id="playBtn"><i class="fa-solid fa-play"></i></button>
+                <button onclick="pauseTimer()" id="pauseBtn" disabled><i class="fa-solid fa-pause"></i></button>
+                <button onclick="resetTimer()" id="resetBtn"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+                <audio id="alarm" src="./assets/audio/alarm.mp3"></audio>
+            </div>
+        </main>
+        <section id="Contact" onmouseover="closeBTnAnimate()">
+            <div  id="closeBtn" class="close"><a onclick="closeSection()"><i class="fa-solid fa-xmark"></i></a></div>
+            <ul>
+                <li class="contactIcons">
+                    <a href="mailto:zanovato@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </li>
+                <li class="contactIcons">
+                    <a href="https://github.com/novatok/pomodoro.git"><i class="fa-brands fa-square-github"></i></a>
+                </li>
+                <!-- <li class="contactIcons">
+                    <a id="shareURL" href="#" onclick="copyLink()" value="https://github.com/novatok/pomodoro.git"><i class="fa-solid fa-share"></i></a>
+                </li> -->
+                <li class="contactIcons">
+                    <a href="#"></a><i class="fa-solid fa-plus"></i></a>
+                </li>
+            </ul>
+        </section>
+        <section id="Info" onmouseover="closeBTnAnimate()">
+            <div id="closeBtn2" class="close"><a onclick="closeSection()"><i class="fa-solid fa-xmark"></i></a></div>
+            <h4>The Pomodoro Technique</h4>
+            <p><em>"Pomodoro is the italian word for tomato."</em></p>
+            <p>If you have open-ended work, like studying or coding, that could take unlimited amounts of time or even if you get distracted easily and spend hours mindlessly browsing tiktok, then the pomodoro technique could be just for you. </p>
+            <p>Developed by Francesco Cirillo in the late 1980s, pomodoro technique is a time management system that uses a kitchen timer to break work into intervals, typically 25 minutes in length, separated by short breaks.</p>
+            <p>This timer follows the pomodoro method giving you 25 minutes for deep focus and a short break of 5 minutes. An alarm will sound at the end of each time period. You can pause, play and reset the timer as needed.</p>
+        </section>
+        <footer>
+            <p> Built by <a href="#">Kam</a> </p>
+        </footer>
+    </div>
+    <script src="assets/js/app.js"></script>
+    <script src="https://kit.fontawesome.com/7fce1ef089.js" crossorigin="anonymous"></script>
+</body>
+</html>
