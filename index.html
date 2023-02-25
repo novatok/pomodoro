@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pomodoro | Optimal Productivity</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/favico.png" type="image/x-icon">
 </head>
 <body onload="loadPage()">
     <div id="loader">
@@ -49,7 +50,7 @@
                 <audio id="alarm" src="./assets/audio/alarm.mp3"></audio>
             </div>
         </main>
-        <section id="Contact" onmouseover="closeBTnAnimate()">
+        <section id="Contact">
             <div  id="closeBtn" class="close"><a onclick="closeSection()"><i class="fa-solid fa-xmark"></i></a></div>
             <ul>
                 <li class="contactIcons">
@@ -62,11 +63,11 @@
                     <a id="shareURL" href="#" onclick="copyLink()" value="https://github.com/novatok/pomodoro.git"><i class="fa-solid fa-share"></i></a>
                 </li> -->
                 <li class="contactIcons">
-                    <a href="#"></a><i class="fa-solid fa-plus"></i></a>
+                    <a href="#"><i class="fa-solid fa-plus"></i></a>
                 </li>
             </ul>
         </section>
-        <section id="Info" onmouseover="closeBTnAnimate()">
+        <section id="Info">
             <div id="closeBtn2" class="close"><a onclick="closeSection()"><i class="fa-solid fa-xmark"></i></a></div>
             <h4>The Pomodoro Technique</h4>
             <p><em>"Pomodoro is the italian word for tomato."</em></p>

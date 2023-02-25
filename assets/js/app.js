@@ -130,10 +130,3 @@ function closeSection() {
     document.getElementById("Info").style.display = "none";
 }
 
-//Add animation for close button in contact & info sections
-addEventListener("onmousemove", closeBTnAnimate );
-
-function closeBTnAnimate() {
-    document.getElementById("closeBtn").style.display = "block";
-    document.getElementById("closeBtn2").style.display = "block";
-}
